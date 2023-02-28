@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private float jumpTime = 0f; // The time the character has been jumping for
     private float jumpDuration = 0.5f; // The total duration of the character's jump
     
+public GameObject torso;
+
     void Start () 
     {
         anim = GetComponentInChildren<Animator>();
@@ -47,6 +49,15 @@ public class PlayerController : MonoBehaviour
                 Vector3 newScale =transform.localScale;
                 newScale.x = -1.0f;
                 transform.localScale = newScale;
+        }
+
+
+        if (Input.GetKey("c")){
+            anim.SetBool("Crouch", true);
+            torso.SetActive(false);
+        } else {
+            anim.SetBool("Crouch", false);
+            torso.SetActive(true);
         }
 
          // Make the character jump when the user presses the spacebar
