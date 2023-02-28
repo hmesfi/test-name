@@ -4,49 +4,52 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f; // The speed at which the character moves
-    public float rotationSpeed = 100f; // The speed at which the character rotates
-
+    public float moveSpeed = 3f; // The speed at which the character moves
+    private Vector3 change; // player movement direction
+    private Rigidbody2D rb2d;
+    private Animator anim;
+    private Renderer rend;
     float jumpHeight = 2f; // The height of the jump
     private bool isJumping = false; // Flag for whether the character is currently jumping
     private float jumpTime = 0f; // The time the character has been jumping for
     private float jumpDuration = 0.5f; // The total duration of the character's jump
     
+    void Start () 
+    {
+        anim = GetComponentInChildren<Animator>();
+        rend = GetComponentInChildren<Renderer> ();
+        rb2d = GetComponent<Rigidbody2D>();
+        anim.SetBool("Walk", false);
+        Debug.Log("setBool to false");
+        
+    }
+
     void OpenChest()
     {
         Debug.Log("open chest");
     }
+
     // Update is called once per framex
     void Update()
     {
-        // Move the character forward when the user presses the "W" key
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        }
+        change = Vector3.zero;
 
-        // Move the character backward when the user presses the "S" key
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(Vector3.back * speed * Time.deltaTime);
-        }
+        change.x = Input.GetAxisRaw("Horizontal");
+        change.y = Input.GetAxisRaw("Vertical");
+        UpdateAnimationAndMove();
 
-        // Turn the character left when the user presses the "A" key
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetAxis ("Horizontal") > 0)
         {
-            transform.Rotate(Vector3.down * rotationSpeed * Time.deltaTime);
+            Debug.Log("Moving right!");
+            Vector3 newScale = transform.localScale;
+            newScale.x = 1.0f;
+            transform.localScale = newScale;
         }
-
-        // Turn the character right when the user presses the "D" key
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
-        }
-
-        // Turn the character around when the user presses the "Q" key
-        if (Input.GetKey(KeyCode.Q))
-        {
-            transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+        else if (Input.GetAxis ("Horizontal") < 0){
+                Debug.Log("Moving left!");
+                Vector3 newScale =transform.localScale;
+                newScale.x = -1.0f;
+                transform.localScale = newScale;
         }
 
          // Make the character jump when the user presses the spacebar
@@ -76,7 +79,21 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //Make the character climb a wall
+    }
+
+    void UpdateAnimationAndMove() {
+
+        change = Vector3.zero;
+        change.x = Input.GetAxis("Horizontal");
+        change.y = Input.GetAxis("Vertical");
+
+        if (change != Vector3.zero) {
+            rb2d.MovePosition(transform.position + change * moveSpeed * Time.deltaTime);
+            anim.SetBool("Walk", true);
+            Debug.Log("Walking activated");
+        } else {
+            anim.SetBool("Walk", false);
+        }
     }
 }
 
