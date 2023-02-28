@@ -4,14 +4,21 @@ using System.Collections;
 
 public class MafiaBossController : MonoBehaviour
 {
-    public float speed = 5f; // The speed at which the mafia boss moves
-    public float endX = 10f; // The x-coordinate of the end point of the mafia boss's movement
-    public float startX = -10f; // The x-coordinate of the start point of the mafia boss's movement
-    public float moveDistance = 20f; // The distance between the start and end points
-    public float pauseTime = 1.5f; // The time the mafia boss pauses before moving back
+    // The speed at which the mafia boss moves
+    public float speed = 5f; 
+    // The x-coordinate of the end point of the mafia boss's movement
+    public float endX = 10f; 
+    // The x-coordinate of the start point of the mafia boss's movement
+    public float startX = -10f; 
+    // The distance between the start and end points
+    public float moveDistance = 20f;
 
-    private float timer; // Timer for pausing before moving back
-    private bool movingForward = true; // Flag for whether the mafia boss is currently moving forward
+    // The time the mafia boss pauses before moving back
+    public float pauseTime = 1.5f;
+    // Timer for pausing before moving back
+    private float timer; 
+    // Flag for whether the mafia boss is currently moving forward
+    private bool movingForward = true; 
 
     // Update is called once per frame
     void Update()
