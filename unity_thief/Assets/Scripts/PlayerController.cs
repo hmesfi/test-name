@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 3f; // The speed at which the character moves
+    public float moveSpeed = 5f; // The speed at which the character moves
     private Vector3 change; // player movement direction
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -18,10 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         rend = GetComponentInChildren<Renderer> ();
-        rb2d = GetComponent<Rigidbody2D>();
-        anim.SetBool("Walk", false);
-        Debug.Log("setBool to false");
-        
+        rb2d = GetComponent<Rigidbody2D>();   
     }
 
     void OpenChest()
@@ -93,6 +90,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Walking activated");
         } else {
             anim.SetBool("Walk", false);
+            Debug.Log("Walking deactivated");
         }
     }
 }
