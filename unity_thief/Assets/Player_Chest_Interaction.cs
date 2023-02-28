@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class Player_Chest_Interaction : MonoBehaviour
 {
     // The distance at which the player can interact with the chest
@@ -38,7 +34,7 @@ public class Player_Chest_Interaction : MonoBehaviour
     void OpenChest()
     {
         // Open the chest and give the player its contents
-        Debug.Log("still to be implemented")
+        Debug.Log("still to be implemented");
     }
 
     
