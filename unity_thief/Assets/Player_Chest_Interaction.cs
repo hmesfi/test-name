@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_Chest_Interaction : MonoBehaviour
 {
     // TO DO:: create interactable layer
-
+    public LayerMask interactableLayer;
 
     // The distance at which the player can interact with the chest
     public float interactionDistance = 2f; 
@@ -27,30 +27,30 @@ public class Player_Chest_Interaction : MonoBehaviour
 
     void Update()
     {
-        CheckChestRange();
+        // CheckChestRange();
     }
 
-    void CheckChestRange()
-    {
-        // Check if player is in range and facing chest
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance))
-        {
-            isPlayerInRange = true;
-            isInteractable = hit.collider.GetComponent<Interactable>() != null;
-        }
-        else
-        {
-            isPlayerInRange = false;
-            isInteractable = false;
-        }
+    // void CheckChestRange()
+    // {
+    //     // Check if player is in range and facing chest
+    //     RaycastHit hit;
+    //     if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance, interactableLayer))
+    //     {
+    //         isPlayerInRange = true;
+    //         isInteractable = hit.collider.GetComponent<Interactable>() != null;
+    //     }
+    //     else
+    //     {
+    //         isPlayerInRange = false;
+    //         isInteractable = false;
+    //     }
 
-        // Check if player presses the interact key and is looking at an interactable object
-        if (isPlayerInRange && isInteractable && Input.GetKeyDown(KeyCode.E))
-        {
-            playerController.OpenChest(); =
-        }
-    }
+    //     // Check if player presses the interact key and is looking at an interactable object
+    //     if (isPlayerInRange && isInteractable && Input.GetKeyDown(KeyCode.E))
+    //     {
+    //         playerController.OpenChest(); 
+    //     }
+    // }
 
     
 }

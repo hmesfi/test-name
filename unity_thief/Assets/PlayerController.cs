@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
-using System.Collections.Generic;
-using System.Collections;
-
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f; // The speed at which the character moves
@@ -16,6 +12,10 @@ public class PlayerController : MonoBehaviour
     private float jumpTime = 0f; // The time the character has been jumping for
     private float jumpDuration = 0.5f; // The total duration of the character's jump
     
+    void OpenChest()
+    {
+        Debug.Log("open chest");
+    }
     // Update is called once per framex
     void Update()
     {
