@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class GameHandler : MonoBehaviour {
 
       private GameObject player;
-      public static int playerHealth = 100;
-      public int StartPlayerHealth = 100;
-      //public GameObject healthText;
+      public static int playerSus = 0;
+      public int StartPlayerSus = 0;
+      public GameObject susText;
 
       public static int gotTokens = 0;
       //public GameObject tokensText;
@@ -27,7 +27,7 @@ public class GameHandler : MonoBehaviour {
             player = GameObject.FindWithTag("Player");
             sceneName = SceneManager.GetActiveScene().name;
             //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
-                  playerHealth = StartPlayerHealth;
+                  playerSus = StartPlayerSus;
             //}
             updateStatsDisplay();
       }
@@ -37,23 +37,23 @@ public class GameHandler : MonoBehaviour {
             updateStatsDisplay();
       }
 
-      public void playerGetHit(int damage){
+      public void playerGetFound(int damage){
            if (isDefending == false){
-                  playerHealth -= damage;
-                  if (playerHealth >=0){
+                  playerSus -= damage;
+                  if (playerSus >=0){
                         updateStatsDisplay();
                   }
                   if (damage > 0){
-                        //player.GetComponent<PlayerHurt>().playerHit();       //play GetHit animation
-                  }
+                       player.GetComponent<PlayerFound>().playerHit();       //play Found animation
+            }
             }
 
-           if (playerHealth > StartPlayerHealth){
+           if (playerSus < StartPlayerSus){
                   playerHealth = StartPlayerHealth;
                   updateStatsDisplay();
             }
 
-           if (playerHealth <= 0){
+           if (playerHealth >= 5){
                   playerHealth = 0;
                   updateStatsDisplay();
                   playerDies();
@@ -61,12 +61,12 @@ public class GameHandler : MonoBehaviour {
       }
 
       public void updateStatsDisplay(){
-            //Text healthTextTemp = healthText.GetComponent<Text>();
-            //healthTextTemp.text = "HEALTH: " + playerHealth;
+        Text healthTextTemp = susText.GetComponent<Text>();
+        healthTextTemp.text = "SUS LEVEL: " + playerHealth;
 
-            //Text tokensTextTemp = tokensText.GetComponent<Text>();
-            //tokensTextTemp.text = "GOLD: " + gotTokens;
-      }
+        Text tokensTextTemp = tokensText.GetComponent<Text>();
+        tokensTextTemp.text = "GOLD: " + gotTokens;
+    }
 
       public void playerDies(){
             //player.GetComponent<PlayerHurt>().playerDead();       //play Death animation

@@ -18,11 +18,23 @@ public class MafiaBossController : MonoBehaviour
     // Timer for pausing before moving back
     private float timer; 
     // Flag for whether the mafia boss is currently moving forward
-    private bool movingForward = true; 
+    private bool movingForward = true;
+
+    [SerializeField] private float isSussed = 10f;
+    [SerializeField] private float SussedSpeed = 1f;
+    private float canbeSussed;
+
+    public Transform target;
 
     // Update is called once per frame
     void Update()
     {
+        if (target != null)
+        {
+            float step = speed * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, target.position, step);
+        }
+
         if (movingForward)
         {
             // Move the mafia boss forward until it reaches the end point
@@ -58,6 +70,38 @@ public class MafiaBossController : MonoBehaviour
                     movingForward = true;
                 }
             }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (SussedSpeed <= canbeSussed)
+            {
+                other.gameObject.GetComponent<Player_Sus_Meter>().UpdateSus(-isSussed);
+                canbeSussed = 0f;
+            }
+            else
+            {
+                canbeSussed += Time.deltaTime;
+            }
+
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            target = other.transform;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            target = null;
         }
     }
 }
