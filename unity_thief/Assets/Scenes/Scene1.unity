@@ -277,34 +277,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4768332217720773363, guid: c4c8a9d64317047e8a40123558056797, type: 3}
+    - target: {fileID: 4811055894955496117, guid: c4c8a9d64317047e8a40123558056797, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 5133019644572867321}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4c8a9d64317047e8a40123558056797, type: 3}
 --- !u!1 &1642541767 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3488518506946663561, guid: c4c8a9d64317047e8a40123558056797, type: 3}
   m_PrefabInstance: {fileID: 1642541766}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1642541768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642541767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 680428a9b940f4f478842752fdda28f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  endX: 10
-  startX: -10
-  moveDistance: 20
-  pauseTime: 1.5
-  isSussed: 10
-  SussedSpeed: 1
-  target: {fileID: 5133019644572867321}
 --- !u!50 &1642541770
 Rigidbody2D:
   serializedVersion: 4
@@ -320,44 +303,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &1642541771
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642541767}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
---- !u!58 &1642541772
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642541767}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.45
 --- !u!1001 &534530650038723922
 PrefabInstance:
   m_ObjectHideFlags: 0
