@@ -24,7 +24,15 @@ public class MafiaBossController : MonoBehaviour
     [SerializeField] private float SussedSpeed = 1f;
     private float canbeSussed;
 
-    public Transform target;
+    private Transform target;
+
+    void Start(){
+        target = GameObject.FindWithTag("Player").transform;
+
+    }
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -73,35 +81,35 @@ public class MafiaBossController : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            if (SussedSpeed <= canbeSussed)
-            {
-                other.gameObject.GetComponent<Player_Sus_Meter>().UpdateSus(-isSussed);
-                canbeSussed = 0f;
-            }
-            else
-            {
-                canbeSussed += Time.deltaTime;
-            }
+    // private void OnCollisionStay2D(Collision2D other)
+    // {
+    //     if (other.gameObject.tag == "Player")
+    //     {
+    //         if (SussedSpeed <= canbeSussed)
+    //         {
+    //             other.gameObject.GetComponent<Player_Sus_Meter>().UpdateSus(-isSussed);
+    //             canbeSussed = 0f;
+    //         }
+    //         else
+    //         {
+    //             canbeSussed += Time.deltaTime;
+    //         }
 
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            target = other.transform;
-        }
-    }
+    //     }
+    // }
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.gameObject.tag == "Player")
+    //     {
+    //         target = other.transform;
+    //     }
+    // }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            target = null;
-        }
-    }
+    // private void OnTriggerExit2D(Collider2D other)
+    // {
+    //     if (other.gameObject.tag == "Player")
+    //     {
+    //         target = null;
+    //     }
+    // }
 }
