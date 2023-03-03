@@ -23,7 +23,14 @@ public class GameHandler : MonoBehaviour
 
     private string sceneName;
 
-    public bool hasGoldKey = true;
+    public bool hasGoldKey = false;
+    private string thisLevel;
+    public GameObject key1icon;
+    public GameObject key2icon;
+    public GameObject key3icon;
+    public GameObject key4icon;
+
+
 
     void Start()
     {
@@ -34,12 +41,42 @@ public class GameHandler : MonoBehaviour
         playerSus = StartPlayerSus;
         //}
         updateStatsDisplay();
+
+        key1icon.SetActive(false);
+        key2icon.SetActive(false);
+        key3icon.SetActive(false);
+        key4icon.SetActive(false);
+
+        thisLevel = SceneManager.GetActiveScene().name;
+        DisplayKeys(false);
     }
 
     public void playerGetTokens(int newTokens)
     {
         gotTokens += newTokens;
         updateStatsDisplay();
+    }
+
+    public void DisplayKeys(bool gotKey){
+        if (thisLevel == "Scene1"){
+            if (gotKey){key1icon.SetActive(true);}
+        }
+        
+        if (thisLevel == "Scene2"){
+            key1icon.SetActive(true);
+            if (gotKey){key2icon.SetActive(true);}
+            }
+        if (thisLevel == "Scene3"){
+            key1icon.SetActive(true);
+            key2icon.SetActive(true);
+            if (gotKey){key3icon.SetActive(true);}
+            }
+        if (thisLevel == "Scene4"){
+            key1icon.SetActive(true);
+            key2icon.SetActive(true);
+            key3icon.SetActive(true);
+            if (gotKey){key4icon.SetActive(true);}
+        }
     }
 
     public void playerGetFound(int damage)

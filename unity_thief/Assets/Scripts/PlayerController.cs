@@ -23,10 +23,21 @@ public GameObject torso;
         rb2d = GetComponent<Rigidbody2D>();   
     }
 
-    void OpenChest()
-    {
-        Debug.Log("open chest");
-    }
+    // void PickUpKey()
+    // {
+    //     // Get all colliders overlapping with the player's collider
+    //     // Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, pickupRange, default);
+
+    //     // // Loop through all the colliders and check if they're key objects
+    //     // foreach (Collider2D collider in colliders)
+    //     // {
+    //     //     if (collider.CompareTag("Key"))
+    //     //     {
+    //     //         Destroy(collider.gameObject); // Destroy the key object
+    //     //         // implement updating key count
+    //     //     }
+    //     // }
+    // }
 
     // Update is called once per framex
     void Update()
