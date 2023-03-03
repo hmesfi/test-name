@@ -28,7 +28,6 @@ public class MafiaBossController : MonoBehaviour
 
     void Start(){
         target = GameObject.FindWithTag("Player").transform;
-
     }
 
 
