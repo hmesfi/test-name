@@ -50,13 +50,11 @@ public GameObject torso;
 
         if (Input.GetAxis ("Horizontal") > 0)
         {
-            Debug.Log("Moving right!");
             Vector3 newScale = transform.localScale;
             newScale.x = 1.0f;
             transform.localScale = newScale;
         }
         else if (Input.GetAxis ("Horizontal") < 0){
-                Debug.Log("Moving left!");
                 Vector3 newScale =transform.localScale;
                 newScale.x = -1.0f;
                 transform.localScale = newScale;
@@ -109,10 +107,8 @@ public GameObject torso;
         if (change != Vector3.zero) {
             rb2d.MovePosition(transform.position + change * moveSpeed * Time.deltaTime);
             anim.SetBool("Walk", true);
-            Debug.Log("Walking activated");
         } else {
             anim.SetBool("Walk", false);
-            Debug.Log("Walking deactivated");
         }
     }
 }

@@ -18,6 +18,7 @@ public class KeyInteract : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player"){
+            Debug.Log("key stepped on");
             keyArt.SetActive(false);
             GetComponent<Collider2D>().enabled = false;
             gameHandler.hasGoldKey = true;
