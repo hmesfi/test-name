@@ -12,19 +12,18 @@ public class GameHandler : MonoBehaviour
     public static int playerSus = 0;
     public int StartPlayerSus = 0;
     public GameObject susText;
+    public static string thisLevel;
 
     public static int gotTokens = 0;
     //public GameObject tokensText;
 
     public bool isDefending = false;
 
-    //public static bool stairCaseUnlocked = false;
     //this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
 
     private string sceneName;
 
     public bool hasGoldKey = false;
-    private string thisLevel;
     public GameObject key1icon;
     public GameObject key2icon;
     public GameObject key3icon;
