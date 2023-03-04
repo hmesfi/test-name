@@ -894,6 +894,27 @@ MonoBehaviour:
   startSpot: 0
   moveForward: 1
   faceRight: 1
+--- !u!114 &1642541776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642541767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a13cc30ad58472bb294419b745694c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+  angle: 45
+  playerRef: {fileID: 5133019644572867322}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 128
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1649400142
 GameObject:
   m_ObjectHideFlags: 0
@@ -5049,7 +5070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1772714577688448478, guid: 12277241d71574d5da9884546f89ebeb, type: 3}
       propertyPath: moveSpeed
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12277241d71574d5da9884546f89ebeb, type: 3}

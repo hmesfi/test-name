@@ -5,11 +5,11 @@ using UnityEngine;
 public class Player_Sus_Meter : MonoBehaviour
 {
     private float sus = 0f;
-    [SerializeField] private float maxInconspicous = 100f;
+    [SerializeField] private float minSus = 0f;
 
     private void Start()
     {
-        sus = maxInconspicous;
+        sus = minSus;
     }
 
 
@@ -18,13 +18,20 @@ public class Player_Sus_Meter : MonoBehaviour
         sus += mod;
 
         //this is for if we add ways for the player to reduce susness
-        if (sus > maxInconspicous)
+        if (sus < minSus)
         {
-            sus = maxInconspicous;
-        } else if (sus <= 0f) {
-            sus = 0f;
-            Debug.Log("Player Respawn");
+            sus = minSus;
+        }
+        else if (sus >= 5f)
+        {
+            sus = 5f;
+            Debug.Log("Player Player too sus quit game");
         }
 
+    }
+
+    public float printSus()
+    {
+        return sus;
     }
 }

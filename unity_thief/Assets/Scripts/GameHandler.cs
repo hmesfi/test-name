@@ -9,8 +9,8 @@ public class GameHandler : MonoBehaviour
 
     private GameObject player;
     private GameObject enemy;
-    public static int playerSus = 0;
-    public int StartPlayerSus = 0;
+    public static float playerSus = 0;
+    public float StartPlayerSus = 0;
     public GameObject susText;
     public static string thisLevel;
 
@@ -78,22 +78,16 @@ public class GameHandler : MonoBehaviour
         }
     }
 
-    public void playerGetFound(int damage)
+    public void playerGetFound()
     {
-        //if (enemy.
-
-        //   if (playerSus < StartPlayerSus)
-        //    {
-        //        playerSus = StartPlayerSus;
-        //        updateStatsDisplay();
-        //    }
-
-        //if (playerSus >= 5)
-        //{
-        //    playerSus = 0;
-        //    updateStatsDisplay();
-        //    playerDies();
-        //}
+        if (player.GetComponentInParent<Player_Sus_Meter>().printSus() >= 5f) {
+            QuitGame();
+        } else
+        {
+            Debug.Log("This is sus level: " + player.GetComponentInParent<Player_Sus_Meter>().printSus());
+            playerSus = player.GetComponentInParent<Player_Sus_Meter>().printSus();
+            updateStatsDisplay();
+        }
     }
 
     public void updateStatsDisplay()
