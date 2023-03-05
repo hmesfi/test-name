@@ -9,9 +9,9 @@ public class EnemyGazeMove : MonoBehaviour {
        public LineRenderer lineOfSight;
        public Gradient redColor;
        public Gradient greenColor;
-       public GameObject hitEffectAnim;
+       // public GameObject hitEffectAnim;
 
-       public int EnemyLives = 30;
+       // public int EnemyLives = 30;
        private Renderer rend;
        private GameHandler gameControllerObj;
 
@@ -31,17 +31,17 @@ public class EnemyGazeMove : MonoBehaviour {
               // Raycast needs location, Direction, and length 
               RaycastHit2D hitInfo = Physics2D.Raycast (transform.position, transform.right, distance);
               if (hitInfo.collider != null) {
-                     Debug.DrawLine(transform.position, hitInfo.point, Color.red);
+                     // Debug.DrawLine(transform.position, hitInfo.point, Color.red);
                      lineOfSight.SetPosition(1, hitInfo.point); // index 1 is the end-point of the line 
                      lineOfSight.colorGradient = redColor;
 
-                     if ((hitInfo.collider.CompareTag ("Player")) || (hitInfo.collider.CompareTag ("Enemy"))) {
-                            // GameObject animEffect = Instantiate (hitEffectAnim, hitInfo.point, Quaternion.identity);
-                            // Destroy(animEffect, 0.5f);
-                            // Destroy (hitInfo.collider.gameObject);
-                     }
+                     // if ((hitInfo.collider.CompareTag ("Player")) || (hitInfo.collider.CompareTag ("Enemy"))) {
+                     //        // GameObject animEffect = Instantiate (hitEffectAnim, hitInfo.point, Quaternion.identity);
+                     //        // Destroy(animEffect, 0.5f);
+                     //        // Destroy (hitInfo.collider.gameObject);
+                     // }
               } else {
-                     Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
+                     // Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
                      lineOfSight.SetPosition(1, transform.position + transform.right * distance);
                      lineOfSight.colorGradient = greenColor;
               }

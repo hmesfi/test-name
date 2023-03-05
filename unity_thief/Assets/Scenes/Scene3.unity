@@ -418,8 +418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8770a0f41ae584e12bd85f5d707e9f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  startWaitTime: 2
+  speed: 6
+  startWaitTime: 1
   moveSpots:
   - {fileID: 970960239}
   - {fileID: 1324673059}
@@ -1339,8 +1339,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  hitEffectAnim: {fileID: 0}
-  EnemyLives: 30
 --- !u!50 &2003449870
 Rigidbody2D:
   serializedVersion: 4
@@ -1497,8 +1495,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  hitEffectAnim: {fileID: 0}
-  EnemyLives: 30
 --- !u!50 &2040331161
 Rigidbody2D:
   serializedVersion: 4
