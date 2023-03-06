@@ -18,6 +18,9 @@ public class NPC_Gaze : MonoBehaviour {
 	public LayerMask targetMask;
 	public LayerMask obstructionMask;
 
+       private bool canHit = true;
+       private float coolDown = 0.5f;
+
        void Start() {
               Physics2D.queriesStartInColliders = false;
 
@@ -43,15 +46,17 @@ public class NPC_Gaze : MonoBehaviour {
               //   lineOfSight.SetPosition(1, hitInfo.point); // index 1 is the end-point of the line 
               //        lineOfSight.colorGradient = redColor;
 
-              if (hitInfo.collider.CompareTag ("Player")) {
+              if ((hitInfo.collider.CompareTag ("Player"))&&(canHit)) {
                      Debug.DrawLine(transform.position, hitInfo.point, Color.red);
                      lineOfSight.SetPosition(1, hitInfo.point); // index 1 is the end-point of the line 
-                     lineOfSight.colorGradient = redColor;
+                     //lineOfSight.colorGradient = redColor;
+
                      //        // GameObject animEffect = Instantiate (hitEffectAnim, hitInfo.point, Quaternion.identity);
                      //        // Destroy(animEffect, 0.5f);
                      //        // Destroy (hitInfo.collider.gameObject);
-                            StopCoroutine("NPC_Sus");
+                            //StopCoroutine("NPC_Sus");
                             StartCoroutine(NPC_Sus(1));
+                            StartCoroutine(EnemyCoolDown());
               } else {
                      //Debug.DrawLine(transform.position, transform.position + rayDirection * distance, Color.green);
                      //lineOfSight.SetPosition(1, transform.position + rayDirection * distance);
@@ -65,26 +70,31 @@ public class NPC_Gaze : MonoBehaviour {
        }
 
 
-        void OnCollisionEnter2D(Collision2D collision){
+        void OnTriggerEnter2D(Collider2D other){
 
-               if (collision.gameObject.tag == "Player") {
+               if (other.gameObject.tag == "Player") {
                       //EnemyLives -= 1;
                       StopCoroutine("NPC_Sus");
-                      StartCoroutine(NPC_Sus(4));
+                      StartCoroutine(NPC_Sus(2));
                }
         }
 
        IEnumerator NPC_Sus(int amt){
-              float pauseTime = 0.5f * amt;
+              float pauseTime = 1f * amt;
+
               // color values are R, G, B, and alpha, each divided by 100
-              rend.material.color = new Color(2.4f, 0.9f, 0.9f, 0.5f);
-              //if (EnemyLives < 1){
-              //       gameControllerObj.AddScore (10);
-              //       Destroy(gameObject);
-              //}
-              //else {
-                     yield return new WaitForSeconds(pauseTime);
-                     rend.material.color = Color.white;
-              //}
+              rend.material.color = new Color(2.4f, 0.9f, 0.9f, 1f);
+              gameHandler.SusChange(amt);
+
+              yield return new WaitForSeconds(pauseTime);
+              rend.material.color = Color.white;
+       }
+
+       IEnumerator EnemyCoolDown(){
+              lineOfSight.colorGradient = redColor;
+              canHit = false;
+              yield return new WaitForSeconds(coolDown);
+              canHit = true;
+              lineOfSight.colorGradient = greenColor;
        }
 }

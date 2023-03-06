@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 579316045755713541}
   - component: {fileID: 8140329754191540167}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_old
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,8 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8be8fedb9b340f4861a7232814155b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  moveSpeed: 5
-  rayCastDistance: 10
-  suspicionThreshold: 3
-  enemyPrefab: {fileID: 579316045755713542}
+  speed: 3
+  isSussed: 10
+  SussedSpeed: 1
+  target: {fileID: 0}

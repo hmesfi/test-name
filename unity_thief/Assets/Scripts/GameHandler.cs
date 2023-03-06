@@ -9,36 +9,28 @@ public class GameHandler : MonoBehaviour
 
     private GameObject player;
     private GameObject enemy;
-    public static float playerSus = 0;
-    public float StartPlayerSus = 0;
+    public static int playerSus = 0;
+    private int StartPlayerSus = 0;
+    public int limitSus = 5;
     public GameObject susText;
-    public static string thisLevel;
 
-    public static int gotTokens = 0;
+    //public static int gotTokens = 0;
     //public GameObject tokensText;
 
-    public bool isDefending = false;
+    //public bool isDefending = false;
 
-    //this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
-
-    private string sceneName;
-
+    private string thisLevel;
     public bool hasGoldKey = false;
     public GameObject key1icon;
     public GameObject key2icon;
     public GameObject key3icon;
     public GameObject key4icon;
 
-
-
-    void Start()
-    {
+    void Start(){
         player = GameObject.FindWithTag("Player");
         enemy = GameObject.FindWithTag("Enemy");
-        sceneName = SceneManager.GetActiveScene().name;
-        //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
+
         playerSus = StartPlayerSus;
-        //}
         updateStatsDisplay();
 
         key1icon.SetActive(false);
@@ -50,11 +42,11 @@ public class GameHandler : MonoBehaviour
         DisplayKeys(false);
     }
 
-    public void playerGetTokens(int newTokens)
-    {
-        gotTokens += newTokens;
-        updateStatsDisplay();
-    }
+    // public void playerGetTokens(int newTokens)
+    // {
+    //     gotTokens += newTokens;
+    //     updateStatsDisplay();
+    // }
 
     public void DisplayKeys(bool gotKey){
         if (thisLevel == "Scene1"){
@@ -78,20 +70,18 @@ public class GameHandler : MonoBehaviour
         }
     }
 
-    public void playerGetFound()
-    {
-        if (player.GetComponentInParent<Player_Sus_Meter>().printSus() >= 5f) {
-            QuitGame();
-        } else
-        {
-            Debug.Log("This is sus level: " + player.GetComponentInParent<Player_Sus_Meter>().printSus());
-            playerSus = player.GetComponentInParent<Player_Sus_Meter>().printSus();
-            updateStatsDisplay();
+    public void SusChange(int sus){
+        //if (player.GetComponentInParent<Player_Sus_Meter>().printSus() >= 5f) {
+        playerSus += sus;
+        Debug.Log("player sus level: " + playerSus);
+        updateStatsDisplay();
+
+        if (playerSus >= limitSus){
+            playerDies();
         }
     }
 
-    public void updateStatsDisplay()
-    {
+    public void updateStatsDisplay(){
         Text SusTextTemp = susText.GetComponent<Text>();
         SusTextTemp.text = "SUS LEVEL: " + playerSus;
 
@@ -101,8 +91,8 @@ public class GameHandler : MonoBehaviour
 
     public void playerDies()
     {
-        //player.GetComponent<PlayerHurt>().playerDead();       //play Death animation
-        //StartCoroutine(DeathPause());
+        //player.GetComponent<PlayerHurt>().playerDead();  //play Death animation
+        StartCoroutine(DeathPause());
     }
 
     IEnumerator DeathPause()
@@ -126,11 +116,11 @@ public class GameHandler : MonoBehaviour
 
     public void QuitGame()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-                Application.Quit();
-#endif
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 
     public void Credits()

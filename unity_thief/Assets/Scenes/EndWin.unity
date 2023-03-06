@@ -837,6 +837,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1336914373}
     - target: {fileID: 5810453464685424780, guid: 5b92e7568080d49958f431fe6836d831, type: 3}
+      propertyPath: key1icon
+      value: 
+      objectReference: {fileID: 1336914373}
+    - target: {fileID: 5810453464685424780, guid: 5b92e7568080d49958f431fe6836d831, type: 3}
+      propertyPath: key2icon
+      value: 
+      objectReference: {fileID: 1336914373}
+    - target: {fileID: 5810453464685424780, guid: 5b92e7568080d49958f431fe6836d831, type: 3}
+      propertyPath: key3icon
+      value: 
+      objectReference: {fileID: 1336914373}
+    - target: {fileID: 5810453464685424780, guid: 5b92e7568080d49958f431fe6836d831, type: 3}
+      propertyPath: key4icon
+      value: 
+      objectReference: {fileID: 1336914373}
+    - target: {fileID: 5810453464685424780, guid: 5b92e7568080d49958f431fe6836d831, type: 3}
       propertyPath: hasGoldKey
       value: 0
       objectReference: {fileID: 0}

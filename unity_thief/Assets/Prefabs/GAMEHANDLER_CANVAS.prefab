@@ -216,14 +216,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6920445489604871495}
+  - {fileID: 5963947440523101327}
   m_Father: {fileID: 4356225123926667143}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -512, y: 298}
-  m_SizeDelta: {x: 200, y: 80}
+  m_AnchoredPosition: {x: -472, y: 298}
+  m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2086740683724187242
 CanvasRenderer:
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &5668953656406805465
+--- !u!1 &6391729074982135705
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -606,23 +606,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6920445489604871495}
-  - component: {fileID: 1730242451056908237}
-  - component: {fileID: 4346251584276391545}
+  - component: {fileID: 5963947440523101327}
+  - component: {fileID: 924232371201643037}
+  - component: {fileID: 3190698709306594345}
   m_Layer: 5
-  m_Name: Text_SusMeter
+  m_Name: Text_Sus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6920445489604871495
+--- !u!224 &5963947440523101327
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5668953656406805465}
+  m_GameObject: {fileID: 6391729074982135705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -634,30 +634,30 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 180, y: 60}
+  m_SizeDelta: {x: 280, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1730242451056908237
+--- !u!222 &924232371201643037
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5668953656406805465}
+  m_GameObject: {fileID: 6391729074982135705}
   m_CullTransparentMesh: 1
---- !u!114 &4346251584276391545
+--- !u!114 &3190698709306594345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5668953656406805465}
+  m_GameObject: {fileID: 6391729074982135705}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9528302, g: 0.9434692, b: 0.8494571, a: 1}
+  m_Color: {r: 0.9985443, g: 1, b: 0.8820755, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -669,7 +669,7 @@ MonoBehaviour:
     m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -677,7 +677,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Sus: ???'
+  m_Text: 'SUS LEVEL: ?'
 --- !u!1 &6427827096657734756
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,7 +913,7 @@ PrefabInstance:
     - target: {fileID: 5810453464685424780, guid: 5b92e7568080d49958f431fe6836d831, type: 3}
       propertyPath: susText
       value: 
-      objectReference: {fileID: 5668953656406805465}
+      objectReference: {fileID: 6391729074982135705}
     - target: {fileID: 5810453464685424780, guid: 5b92e7568080d49958f431fe6836d831, type: 3}
       propertyPath: key1icon
       value: 
@@ -932,7 +932,7 @@ PrefabInstance:
       objectReference: {fileID: 1457062686132992031}
     - target: {fileID: 5810453464685424780, guid: 5b92e7568080d49958f431fe6836d831, type: 3}
       propertyPath: hasGoldKey
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6442102086288713403, guid: 5b92e7568080d49958f431fe6836d831, type: 3}
       propertyPath: m_RootOrder
