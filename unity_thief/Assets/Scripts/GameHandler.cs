@@ -21,6 +21,7 @@ public class GameHandler : MonoBehaviour
 
     private string thisLevel;
     public bool hasGoldKey = false;
+    public bool hasSafeKey = false;
     public GameObject key1icon;
     public GameObject key2icon;
     public GameObject key3icon;
