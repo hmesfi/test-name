@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NPC_Gaze : MonoBehaviour {
 
-       //public float rotationSpeed = 30;
-       public float distance = 20;
+       public float rotationSpeed = 30;
+       public float distance = 2;
        public LineRenderer lineOfSight;
        public Gradient redColor;
        public Gradient greenColor;

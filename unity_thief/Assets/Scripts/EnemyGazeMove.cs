@@ -6,9 +6,9 @@ public class EnemyGazeMove : MonoBehaviour {
 
        public float rotationSpeed = 30;
        public float distance = 2;
-       public LineRenderer lineOfSight;
-       public Gradient redColor;
-       public Gradient greenColor;
+       //public LineRenderer lineOfSight;
+       // public Gradient redColor;
+       // public Gradient greenColor;
        // public GameObject hitEffectAnim;
 
        // public int EnemyLives = 30;
@@ -18,7 +18,7 @@ public class EnemyGazeMove : MonoBehaviour {
        void Start() {
               Physics2D.queriesStartInColliders = false;
 
-              rend = GetComponent<Renderer>();
+              //rend = GetComponent<Renderer>();
               GameObject gameControllerLocation = GameObject.FindWithTag ("GameHandler");
               if (gameControllerLocation != null) {
                      gameControllerObj = gameControllerLocation.GetComponent<GameHandler>();
@@ -28,24 +28,26 @@ public class EnemyGazeMove : MonoBehaviour {
        void FixedUpdate () {
               transform.Rotate (Vector3.forward * rotationSpeed * Time.deltaTime);
 
-              // Raycast needs location, Direction, and length 
-              RaycastHit2D hitInfo = Physics2D.Raycast (transform.position, transform.right, distance);
-              if (hitInfo.collider != null) {
-                     // Debug.DrawLine(transform.position, hitInfo.point, Color.red);
-                     lineOfSight.SetPosition(1, hitInfo.point); // index 1 is the end-point of the line 
-                     lineOfSight.colorGradient = redColor;
+              // // Raycast needs location, Direction, and length 
+              // RaycastHit2D hitInfo = Physics2D.Raycast (transform.position, transform.right, distance);
+              // if (hitInfo.collider != null) {
+              //        // Debug.DrawLine(transform.position, hitInfo.point, Color.red);
+              //        lineOfSight.SetPosition(1, hitInfo.point); // index 1 is the end-point of the line 
+              //        lineOfSight.colorGradient = redColor;
 
-                     // if ((hitInfo.collider.CompareTag ("Player")) || (hitInfo.collider.CompareTag ("Enemy"))) {
-                     //        // GameObject animEffect = Instantiate (hitEffectAnim, hitInfo.point, Quaternion.identity);
-                     //        // Destroy(animEffect, 0.5f);
-                     //        // Destroy (hitInfo.collider.gameObject);
-                     // }
-              } else {
-                     // Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
-                     lineOfSight.SetPosition(1, transform.position + transform.right * distance);
-                     lineOfSight.colorGradient = greenColor;
-              }
-              lineOfSight.SetPosition (0, transform.position); // index 0 is the start-point of the line
+              //        // if ((hitInfo.collider.CompareTag ("Player")) || (hitInfo.collider.CompareTag ("Enemy"))) {
+              //        //        // GameObject animEffect = Instantiate (hitEffectAnim, hitInfo.point, Quaternion.identity);
+              //        //        // Destroy(animEffect, 0.5f);
+              //        //        // Destroy (hitInfo.collider.gameObject);
+              //        // }
+              // } else 
+              
+              // //{
+              //        // Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
+              //        lineOfSight.SetPosition(1, transform.position + transform.right * distance);
+              //        lineOfSight.colorGradient = greenColor;
+              // }
+              // lineOfSight.SetPosition (0, transform.position); // index 0 is the start-point of the line
        }
 
 
@@ -75,3 +77,5 @@ public class EnemyGazeMove : MonoBehaviour {
     //           }
     //    }
 }
+
+
