@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 public class NPC_PatrolSequencePoints : MonoBehaviour {
-       // private Animator anim;
+       private Animator anim;
        public float speed = 4f;
        private float waitTime;
        public float startWaitTime = 2f;
@@ -21,7 +21,7 @@ public class NPC_PatrolSequencePoints : MonoBehaviour {
        void Start(){
               waitTime = startWaitTime;
               nextSpot = startSpot; 
-              //anim = gameObject.GetComponentInChildren(); 
+              anim = gameObject.GetComponentInChildren<Animator>(); 
        }
 
        void Update(){
@@ -31,8 +31,10 @@ public class NPC_PatrolSequencePoints : MonoBehaviour {
                      if (waitTime <= 0){
                             if (moveForward == true){ previousSpot = nextSpot; nextSpot += 1; }
                             else if (moveForward == false){ previousSpot = nextSpot; nextSpot -= 1; }
+                            anim.SetBool("Walk", true);
                             waitTime = startWaitTime;
                      } else {
+                            anim.SetBool("Walk", false);
                             waitTime -= Time.deltaTime;
                      }
               } 

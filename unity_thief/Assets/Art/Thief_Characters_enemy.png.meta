@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: b810a22d3a1d744cba0905d5ca98d495
-=======
-guid: bbcd74ab472ac482580f0980f4ef0a2e
->>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,33 +33,21 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
     filterMode: 0
-=======
-    filterMode: 1
->>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
     aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  spritePixelsToUnits: 16
-=======
-  spritePixelsToUnits: 100
->>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
+  spritePixelsToUnits: 75
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -78,19 +62,15 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
-  cookieLightType: 0
+  applyGammaDecoding: 1
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
     textureCompression: 0
-=======
-    textureCompression: 1
->>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,7 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -135,7 +115,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
     sprites:
     - serializedVersion: 2
       name: Thief_Characters_enemy_0
@@ -152,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a30975b413e144555800d64a558ed882
-      internalID: -1413780689
+      spriteID: 54a3a83228d0841b7bdb789cedbb6fbc
+      internalID: 1049409166
       vertices: []
       indices: 
       edges: []
@@ -173,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 314425c819c3e4cd4bca9903048df260
-      internalID: -344232686
+      spriteID: 257f615d9659745a6b018ad74f0b9da0
+      internalID: 1600089961
       vertices: []
       indices: 
       edges: []
@@ -194,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae3359d22b944405794dfcf460304539
-      internalID: 1232241245
+      spriteID: e8768b1272fe74735ae0f705a22f629c
+      internalID: -1225883982
       vertices: []
       indices: 
       edges: []
@@ -215,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4390f63c49de44f92ae9388b69c40b26
-      internalID: -1119523524
+      spriteID: 05d31441e77964f848be6073f82e023c
+      internalID: -1794007963
       vertices: []
       indices: 
       edges: []
@@ -236,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d54ee64c760c4863b237763fbafbbbf
-      internalID: 1121154230
+      spriteID: 186f62f835a97471796f92144b370c2b
+      internalID: 503168809
       vertices: []
       indices: 
       edges: []
@@ -257,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d8c17892d0014f929ac0378490d5b29
-      internalID: -289686711
+      spriteID: c5536571fa4e44cc8bb06b9530cbcc1f
+      internalID: 1888846864
       vertices: []
       indices: 
       edges: []
@@ -278,8 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0c31efb9acbd4fd39d4f54af9e66142
-      internalID: 539571231
+      spriteID: dce70f49ca67e48d6881eb24c5049f05
+      internalID: 2078303495
       vertices: []
       indices: 
       edges: []
@@ -299,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaba4c63c2f2646b7b583270433af8e7
-      internalID: -1877321227
+      spriteID: 1932dc43ac8d24e1296cce01b69bf671
+      internalID: 54448398
       vertices: []
       indices: 
       edges: []
@@ -320,15 +299,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 265181782afdb49e1ab43a9e0ebdc8e2
-      internalID: 924750693
+      spriteID: 5653cadcfa8234c96b57773f276d29b9
+      internalID: -1561054862
       vertices: []
       indices: 
       edges: []
       weights: []
-=======
-    sprites: []
->>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
     outline: []
     physicsShape: []
     bones: []
@@ -339,20 +315,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
     nameFileIdTable:
-      Thief_Characters_enemy_2: 1232241245
-      Thief_Characters_enemy_3: -1119523524
-      Thief_Characters_enemy_8: 924750693
-      Thief_Characters_enemy_4: 1121154230
-      Thief_Characters_enemy_7: -1877321227
-      Thief_Characters_enemy_0: -1413780689
-      Thief_Characters_enemy_6: 539571231
-      Thief_Characters_enemy_5: -289686711
-      Thief_Characters_enemy_1: -344232686
-=======
-    nameFileIdTable: {}
->>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
+      Thief_Characters_enemy_2: -1225883982
+      Thief_Characters_enemy_3: -1794007963
+      Thief_Characters_enemy_8: -1561054862
+      Thief_Characters_enemy_4: 503168809
+      Thief_Characters_enemy_7: 54448398
+      Thief_Characters_enemy_0: 1049409166
+      Thief_Characters_enemy_6: 2078303495
+      Thief_Characters_enemy_5: 1888846864
+      Thief_Characters_enemy_1: 1600089961
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
