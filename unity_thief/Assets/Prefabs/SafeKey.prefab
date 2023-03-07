@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3361662394554757827}
   - component: {fileID: 4822785352010822760}
   - component: {fileID: 8344614769101104689}
-  - component: {fileID: 7560027745929702007}
   - component: {fileID: 3078453889022113938}
   - component: {fileID: 1569955134306507338}
+  - component: {fileID: 2789219260724734934}
   m_Layer: 0
   m_Name: SafeKey
   m_TagString: Untagged
@@ -77,20 +77,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverSpeed: 4
   hoverDistance: 0.05
---- !u!114 &7560027745929702007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5231559303191117455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcdd4658e163a4e6fa47d1df5c7f3587, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyPickUpSFX: {fileID: 0}
-  keyArt: {fileID: 6672858839897326190}
 --- !u!82 &3078453889022113938
 AudioSource:
   m_ObjectHideFlags: 0
@@ -207,6 +193,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &2789219260724734934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5231559303191117455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde3fec378c7d43bda9bdb273e36bd22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  safekeyArt: {fileID: 0}
 --- !u!1 &6672858839897326190
 GameObject:
   m_ObjectHideFlags: 0

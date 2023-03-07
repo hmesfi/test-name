@@ -2,31 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyInteract : MonoBehaviour
+public class SafeKeyInteraction : MonoBehaviour
 {
     private GameHandler gameHandler;
-    public AudioClip keyPickUpClip;
+    public GameObject safekeyArt;
     public AudioSource keyPickUpSFX;
-    public GameObject keyArt;
+
 
     void Start(){
         if (GameObject.FindWithTag("GameHandler") != null){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
         }
+        safekeyArt.SetActive(false);
         keyPickUpSFX = GetComponent<AudioSource>();
-           Debug.Log("lalalala");
     }
 
-    // Update is called once per frame
+    void Update(){
+        if (gameHandler.hasGoldKey == true) {
+            safekeyArt.SetActive(true);
+        }
+    }
+
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player"){
-            Debug.Log("u stepped on the key");
-            keyArt.SetActive(false);
+        if ((other.gameObject.tag == "Player") && gameHandler.hasGoldKey == true ){
+            safekeyArt.SetActive(false);
+            gameHandler.hasSafeKey = true;
             GetComponent<Collider2D>().enabled = false;
             keyPickUpSFX.Play();
-            gameHandler.hasGoldKey = true;
-            gameHandler.DisplayKeys(true);
             StartCoroutine(DelayDestroy());
         }
     }
@@ -34,6 +37,5 @@ public class KeyInteract : MonoBehaviour
     IEnumerator DelayDestroy(){
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
-    }
-
+    } 
 }
