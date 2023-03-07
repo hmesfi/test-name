@@ -395,7 +395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1772714577688448478, guid: 12277241d71574d5da9884546f89ebeb, type: 3}
       propertyPath: moveSpeed
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12277241d71574d5da9884546f89ebeb, type: 3}
@@ -591,6 +591,10 @@ PrefabInstance:
     - target: {fileID: 4533043930185781397, guid: fee56b07e350e4468bd5fd20d8f9b0b3, type: 3}
       propertyPath: m_Name
       value: Enemy_Guard
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596725749842517562, guid: fee56b07e350e4468bd5fd20d8f9b0b3, type: 3}
+      propertyPath: speed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4596725749842517562, guid: fee56b07e350e4468bd5fd20d8f9b0b3, type: 3}
       propertyPath: moveSpots.Array.data[0]
