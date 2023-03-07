@@ -109,8 +109,8 @@ public class GameHandler : MonoBehaviour
         SceneManager.LoadScene("Scene1");
     }
 
-    public void RestartGame()
-    {
+    public void RestartGame(){
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
         playerSus = StartPlayerSus;
     }
