@@ -1425,6 +1425,30 @@ PrefabInstance:
       propertyPath: hasGoldKey
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4189716606292471054, guid: 61c4d4badd1764a07bd7088e621e7b5f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189716606292471054, guid: 61c4d4badd1764a07bd7088e621e7b5f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189716606292471054, guid: 61c4d4badd1764a07bd7088e621e7b5f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856266947038977626, guid: 61c4d4badd1764a07bd7088e621e7b5f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766040259983368522, guid: 61c4d4badd1764a07bd7088e621e7b5f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766040259983368522, guid: 61c4d4badd1764a07bd7088e621e7b5f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61c4d4badd1764a07bd7088e621e7b5f, type: 3}
 --- !u!1001 &6266341449731716133
