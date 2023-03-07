@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b810a22d3a1d744cba0905d5ca98d495
+=======
+guid: bbcd74ab472ac482580f0980f4ef0a2e
+>>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +37,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: 0
+=======
+    filterMode: 1
+>>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +50,20 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 2
+=======
+  spriteMode: 1
+>>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   spritePixelsToUnits: 16
+=======
+  spritePixelsToUnits: 100
+>>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +86,11 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+<<<<<<< HEAD
     textureCompression: 0
+=======
+    textureCompression: 1
+>>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,6 +135,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
+<<<<<<< HEAD
     sprites:
     - serializedVersion: 2
       name: Thief_Characters_enemy_0
@@ -305,6 +326,9 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+=======
+    sprites: []
+>>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
     outline: []
     physicsShape: []
     bones: []
@@ -315,6 +339,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< HEAD
     nameFileIdTable:
       Thief_Characters_enemy_2: 1232241245
       Thief_Characters_enemy_3: -1119523524
@@ -325,6 +350,9 @@ TextureImporter:
       Thief_Characters_enemy_6: 539571231
       Thief_Characters_enemy_5: -289686711
       Thief_Characters_enemy_1: -344232686
+=======
+    nameFileIdTable: {}
+>>>>>>> f5aa4766e6c4c846eeffe55ade8bdf29c27909ff
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
